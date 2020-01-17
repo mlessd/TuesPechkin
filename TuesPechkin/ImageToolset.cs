@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing.Printing;
+//using System.Drawing.Printing;
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -97,8 +97,11 @@ namespace TuesPechkin
             return success;
         }
 
-        public unsafe string GetGlobalSetting(IntPtr setting, string name)
+        public /*unsafe*/ string GetGlobalSetting(IntPtr setting, string name)
         {
+            throw new NotSupportedException();
+
+            /*
             Tracer.Trace("T:" + Thread.CurrentThread.Name + " Getting global setting (wkhtmltoimage_get_global_setting)");
 
             byte[] buf = new byte[2048];
@@ -116,6 +119,7 @@ namespace TuesPechkin
             }
 
             return Encoding.UTF8.GetString(buf, 0, walk);
+            */
         }
 
         public int SetObjectSetting(IntPtr setting, string name, string value)
@@ -123,7 +127,7 @@ namespace TuesPechkin
             throw new NotSupportedException();
         }
 
-        public unsafe string GetObjectSetting(IntPtr setting, string name)
+        public /*unsafe*/ string GetObjectSetting(IntPtr setting, string name)
         {
             throw new NotSupportedException();
         }

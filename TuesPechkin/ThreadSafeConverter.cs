@@ -132,10 +132,10 @@ namespace TuesPechkin
 
         private void Run()
         {
-            using (WindowsIdentity.Impersonate(IntPtr.Zero))
-            {
-                Thread.CurrentPrincipal = new WindowsPrincipal(WindowsIdentity.GetCurrent());
-            }
+            //using (WindowsIdentity.Impersonate(IntPtr.Zero))
+            //{
+            //    Thread.CurrentPrincipal = new WindowsPrincipal(WindowsIdentity.GetCurrent());
+            //}
 
             while (!stopRequested)
             {

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Appcom.TuesPechkin</id>
+    <version>2.1.1</version>
+    <title>TuesPechkin</title>
+    <authors>Appcom</authors>
+    <owners>Appcom</owners>
+    <projectUrl>https://github.com/mlessd/TuesPechkin</projectUrl>
+	<license type="expression">CC-BY-4.0</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .NET wrapper for wkhtmltopdf. Supports .NET 2.0 and up, 32-bit, 64-bit, multithreading, and IIS environments.</description>
+    <copyright>Copyright 2015</copyright>
+    <tags>wkhtmltopdf html pdf</tags>
+  </metadata>
+</package>

@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 namespace TuesPechkin
 {
     [Serializable]
-    public unsafe static class WkhtmltoxBindings
+    public /*unsafe*/ static class WkhtmltoxBindings
     {
         public const string DLLNAME = "wkhtmltox.dll";
         private const CharSet CHARSET = CharSet.Unicode;
@@ -45,17 +45,17 @@ namespace TuesPechkin
         [DllImport(DLLNAME, CharSet = CHARSET)]
         public static extern int wkhtmltopdf_extended_qt();
 
-        [DllImport(DLLNAME, CharSet = CHARSET)]
-        public static unsafe extern int wkhtmltopdf_get_global_setting(IntPtr settings,
-            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(Utf8Marshaler))]
-            String name,
-            byte* value, int valueSize);
+        //[DllImport(DLLNAME, CharSet = CHARSET)]
+        //public static unsafe extern int wkhtmltopdf_get_global_setting(IntPtr settings,
+        //    [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(Utf8Marshaler))]
+        //    String name,
+        //    byte* value, int valueSize);
 
-        [DllImport(DLLNAME, CharSet = CHARSET)]
-        public static extern int wkhtmltopdf_get_object_setting(IntPtr settings,
-            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(Utf8Marshaler))]
-            String name,
-            byte* value, int vs);
+        //[DllImport(DLLNAME, CharSet = CHARSET)]
+        //public static extern int wkhtmltopdf_get_object_setting(IntPtr settings,
+        //    [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(Utf8Marshaler))]
+        //    String name,
+        //    byte* value, int vs);
 
         [DllImport(DLLNAME, CharSet = CHARSET)]
         public static extern int wkhtmltopdf_get_output(IntPtr converter, out IntPtr data);
@@ -132,11 +132,11 @@ namespace TuesPechkin
         [DllImport(DLLNAME, CharSet = CHARSET)]
         public static extern int wkhtmltoimage_extended_qt();
 
-        [DllImport(DLLNAME, CharSet = CHARSET)]
-        public static unsafe extern int wkhtmltoimage_get_global_setting(IntPtr settings,
-            [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(Utf8Marshaler))]
-            String name,
-            byte* value, int valueSize);
+        //[DllImport(DLLNAME, CharSet = CHARSET)]
+        //public static unsafe extern int wkhtmltoimage_get_global_setting(IntPtr settings,
+        //    [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(Utf8Marshaler))]
+        //    String name,
+        //    byte* value, int valueSize);
 
         [DllImport(DLLNAME, CharSet = CHARSET)]
         public static extern int wkhtmltoimage_get_output(IntPtr converter, out IntPtr data);

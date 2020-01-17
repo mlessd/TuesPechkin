@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
-using System.Runtime.Remoting;
+//using System.Runtime.Remoting;
 
 namespace TuesPechkin
 {
@@ -25,6 +25,9 @@ namespace TuesPechkin
 
         public override void Load(IDeployment deployment = null)
         {
+            throw new NotSupportedException();
+
+            /*
             if (Loaded)
             {
                 return;
@@ -54,6 +57,7 @@ namespace TuesPechkin
             Deployment = NestedToolset.Deployment;
 
             Loaded = true;
+            */
         }
 
         public override event EventHandler Unloaded;
@@ -70,6 +74,9 @@ namespace TuesPechkin
 
         private void SetupAppDomain()
         {
+            throw new NotSupportedException();
+
+            /*
             var setup = AppDomain.CurrentDomain.SetupInformation;
 
             setup.LoaderOptimization = LoaderOptimization.SingleDomain;
@@ -83,6 +90,7 @@ namespace TuesPechkin
             {
                 AppDomain.CurrentDomain.DomainUnload += TearDownAppDomain;
             }
+            */
         }
 
         private void TearDownAppDomain(object sender, EventArgs e)

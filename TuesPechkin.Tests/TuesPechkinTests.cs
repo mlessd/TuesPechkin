@@ -9,7 +9,7 @@ namespace TuesPechkin.Tests
     [TestClass]
     public abstract class TuesPechkinTests
     {
-        protected const string TEST_WK_VER = "0.12.2";
+        protected const string TEST_WK_VER = "0.12.5";
         protected const string TEST_URL = "www.google.com";
 
         // Simulates 1.x.x
@@ -19,10 +19,10 @@ namespace TuesPechkin.Tests
                 
         static TuesPechkinTests()
         {
-            Debug.Listeners.Add(new DefaultTraceListener());
+            //Debug.Listeners.Add(new DefaultTraceListener());
 
             toolset =
-                new RemotingToolset<PdfToolset>(
+                new PdfToolset(
                     new StaticDeployment(
                         Path.Combine(
                             AppDomain.CurrentDomain.BaseDirectory,
@@ -38,10 +38,12 @@ namespace TuesPechkin.Tests
             toolset.Unload();
         }
 
+        /*
         protected AppDomain GetAppDomain(string name)
         {
             return AppDomain.CreateDomain(name, null, AppDomain.CurrentDomain.SetupInformation);
         }
+        */
 
         protected static string GetDeploymentPath()
         {

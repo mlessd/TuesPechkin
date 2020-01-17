@@ -12,4 +12,4 @@ _ReSharper.*
 # mstest test results
 TestResults
 *.nupkg
-*.nuspec
+#*.nuspec

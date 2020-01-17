@@ -1,3 +1,8 @@
+This is a version of the TuesPechkin library, modified to support .NET Core.
+Only the changes needed to make the HTML to PDF conversion work were made.
+Some features of the library have been disabled and can't be used in this version.
+
+
 #TuesPechkin
 TuesPechkin is a .NET Wrapper for the [wkhtmltopdf](https://github.com/wkhtmltopdf/wkhtmltopdf) library. 
 

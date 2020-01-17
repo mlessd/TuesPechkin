@@ -28,6 +28,7 @@ namespace TuesPechkin.Tests
             toolset.Unload(); // Needed for testing framework to succeed
         }
 
+        /*
         [TestMethod]
         public void ConvertsAfterAppDomainRecycles()
         {
@@ -71,6 +72,7 @@ namespace TuesPechkin.Tests
             Assert.IsNotNull(result1);
             Assert.IsNotNull(result2);
         }
+        */
 
         [TestMethod]
         public void HandlesConcurrentThreads()
@@ -198,6 +200,7 @@ namespace TuesPechkin.Tests
             Assert.IsNotNull(result);
         }
 
+        /*
         [TestMethod]
         public void UnloadsWkhtmltoxWhenAppDomainUnloads()
         {
@@ -226,5 +229,6 @@ namespace TuesPechkin.Tests
                 .Cast<ProcessModule>()
                 .Any(m => m.ModuleName == "wkhtmltox.dll"));
         }
+        */
     }
 }

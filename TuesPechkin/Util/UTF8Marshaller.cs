@@ -29,8 +29,11 @@ namespace TuesPechkin
             return buffer;
         }
 
-        public unsafe object MarshalNativeToManaged(IntPtr pNativeData)
+        public /*unsafe*/ object MarshalNativeToManaged(IntPtr pNativeData)
         {
+            throw new NotSupportedException();
+
+            /*
             byte* walk = (byte*)pNativeData;
 
             // find the end of the string
@@ -46,6 +49,7 @@ namespace TuesPechkin
             Marshal.Copy(pNativeData, strbuf, 0, length - 1);
             string data = Encoding.UTF8.GetString(strbuf);
             return data;
+            */
         }
 
         public void CleanUpNativeData(IntPtr pNativeData)
